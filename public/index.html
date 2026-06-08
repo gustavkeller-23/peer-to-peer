@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figurinhas P2P · ALUNO-12</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="status-dot" id="status-dot"></div>
+    <h1>Figurinhas P2P</h1>
+    <span class="peer-badge" id="peer-id-badge">ALUNO-12</span>
+</header>
+
+<main>
+    <div class="left-panel">
+        <div class="toolbar">
+            <span style="font-size:13px;color:var(--muted);font-weight:500">Inventário</span>
+            <input type="text" id="manual-sticker" placeholder="FIG-05" maxlength="6">
+            <button class="btn-primary" onclick="searchSticker()">🔍 Buscar</button>
+            <button class="btn-secondary" onclick="renderInventory()">↻ Atualizar</button>
+        </div>
+        <div class="inventory-grid" id="inventory-grid">
+            <div style="grid-column:1/-1;color:var(--muted);font-size:13px;padding:40px 0;text-align:center">
+                Carregando inventário...
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="stat">Total: <strong id="stat-total">0</strong></div>
+            <div class="stat">Únicas: <strong id="stat-unique">0</strong></div>
+            <div class="stat">Faltando: <strong id="stat-missing">0</strong></div>
+            <div class="stat" style="margin-left:auto;color:var(--green)">Peers: <strong id="stat-peers">0</strong></div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="peers-section">
+            <div class="section-title">🌐 Peers conectados</div>
+            <div class="peer-connect">
+                <input type="text" id="peer-addr" placeholder="ws://host:8080">
+                <button class="btn-primary" onclick="connectPeer()">+</button>
+            </div>
+            <div class="peers-list" id="peers-list">
+                <div class="no-peers">Nenhum peer conectado</div>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <div class="section-title">
+                📡 Eventos em tempo real
+                <button class="btn-secondary" style="margin-left:auto;padding:2px 8px;font-size:10px" onclick="clearLog()">limpar</button>
+            </div>
+            <div class="log-entries" id="log-entries">
+                <div class="log-entry">Aguardando eventos...</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="./scripts/script.js">
+</script>
+</body>
+</html>
