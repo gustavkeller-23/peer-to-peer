@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "peerId": "ALUNO-12",
+    "myStickerId": "FIG-12",
+    "savedAt": "2026-06-23T18:07:25.847Z",
+    "version": "1.1.0"
+  },
+  "inventory": {
+    "FIG-12": 28
+  },
+  "peers": {},
+  "messages": [
+    {
+      "ts": "2026-06-23T01:55:32.502Z",
+      "direction": "OUT",
+      "type": "SEARCH",
+      "peer": "broadcast",
+      "sticker_id": "FIG-10",
+      "query_id": "f049cc86-5f81-4b5a-9038-03c77c0b65ce",
+      "neighbors_count": 0
+    }
+  ],
+  "searchHistory": [
+    {
+      "ts": "2026-06-23T01:55:32.502Z",
+      "type": "SENT",
+      "sticker_id": "FIG-10",
+      "query_id": "f049cc86-5f81-4b5a-9038-03c77c0b65ce"
+    }
+  ],
+  "tradeHistory": []
+}

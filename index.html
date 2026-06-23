@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figurinhas P2P</title>
+    <meta name="description" content="Sistema de troca de figurinhas P2P descentralizado por flooding" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="app">
+        <!-- ── Header ───────────────────────────────────────── -->
+        <header>
+            <div class="logo">Figura<span>P2P</span></div>
+            <div class="peer-badge" id="header-peer-id">…</div>
+            <div class="peer-badge" style="color: var(--accent2)" id="header-sticker-id">…</div>
+            <div class="conn-status">
+                <div class="conn-dot" id="conn-dot"></div>
+                <span id="conn-label">Desconectado</span>
+            </div>
+        </header>
+
+        <!-- ── Sidebar Esquerda: Vizinhos + Conectar ────────── -->
+        <aside class="sidebar-left">
+            <div class="section">
+                <div class="section-title">Conectar a Vizinho</div>
+                <input id="peer-ip" type="text" placeholder="IP ou hostname (ex: 192.168.1.5)" />
+                <div class="row">
+                    <input id="peer-port" type="number" placeholder="Porta" value="8080" style="width:90px;flex:none" />
+                    <input id="peer-id-input" type="text" placeholder="Conta (ex: ALUNO-05, user@x.com)" />
+                </div>
+                <button class="full" id="btn-connect" onclick="connectPeer()">Conectar</button>
+            </div>
+
+            <div class="section" style="padding-bottom:8px">
+                <div class="section-title">Vizinhos (<span id="neighbor-count">0</span>)</div>
+            </div>
+            <div class="scroll">
+                <div class="peer-list" id="peer-list">
+                    <div class="empty"><div class="icon">📡</div>Sem vizinhos</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ── Centro ───────────────────────────────────────── -->
+        <main class="main">
+            <div class="tabs">
+                <div class="tab active" id="tab-btn-inv"      onclick="switchTab('inv')">📦 Inventário</div>
+                <div class="tab"        id="tab-btn-search"   onclick="switchTab('search')">🔍 Buscar</div>
+                <div class="tab"        id="tab-btn-trade"    onclick="switchTab('trade')">🔄 Trocar</div>
+                <div class="tab"        id="tab-btn-offers"   onclick="switchTab('offers')">
+                    🤝 Ofertas
+                    <span id="offers-badge" style="display:none;background:var(--yellow);color:#0d0f14;border-radius:99px;padding:1px 7px;font-size:11px;margin-left:4px">0</span>
+                </div>
+                <div class="tab"        id="tab-btn-messages" onclick="switchTab('messages')">📨 Mensagens</div>
+            </div>
+
+            <!-- ── Inventário ─────────────────────────────── -->
+            <div class="tab-content active" id="tab-inv">
+                <div class="scroll">
+                    <div class="inv-grid" id="inv-grid">
+                        <div class="empty" style="grid-column:1/-1"><div class="icon">📭</div>Inventário vazio</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Busca ──────────────────────────────────── -->
+            <div class="tab-content" id="tab-search">
+                <div class="panel">
+                    <div class="search-box">
+                        <input id="search-input" type="text" placeholder="FIG-XX ou FIG-XX.PNG"
+                            onkeydown="if(event.key==='Enter')doSearch()" />
+                        <button id="btn-search" onclick="doSearch()">🔍 Buscar (flood)</button>
+                    </div>
+                    <div class="flood-note">
+                        ℹ️ A busca é enviada por <strong>inundação (flooding)</strong> para todos os vizinhos com TTL=7.
+                        Ao encontrar a figurinha, você pode propor uma troca diretamente.
+                    </div>
+                    <div class="search-results" id="search-results">
+                        <div class="empty"><div class="icon">🔍</div>Nenhuma busca ainda</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Trocar ─────────────────────────────────── -->
+            <div class="tab-content" id="tab-trade">
+                <div class="panel">
+                    <div class="trade-form">
+                        <div>
+                            <label>Peer destino
+                                <span class="label-hint">— pode ser qualquer peer na rede, não precisa ser vizinho direto</span>
+                            </label>
+                            <!-- Campo livre: aceita qualquer peer_id -->
+                            <input id="trade-target-input" type="text"
+                                placeholder="Ex: ALUNO-05…" />
+                            <!-- Atalhos para vizinhos já conectados -->
+                            <div class="hint-row" id="trade-target-hints">
+                                <span style="color:var(--muted);font-size:12px">Nenhum vizinho conectado</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Figurinha que você oferece</label>
+                            <select id="trade-offer"></select>
+                        </div>
+                        <div>
+                            <label>Figurinha que você quer</label>
+                            <input id="trade-want" type="text" placeholder="FIG-XX" />
+                        </div>
+                        <div class="flood-note">
+                            📡 A proposta será enviada por <strong>flooding</strong> até encontrar o peer destino,
+                            mesmo que ele não seja seu vizinho direto.
+                        </div>
+                        <button class="success" id="btn-trade-send" onclick="sendTradeOffer()">
+                            📤 Enviar Proposta de Troca (flooding)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Ofertas Recebidas ───────────────────────── -->
+            <div class="tab-content" id="tab-offers">
+                <div class="panel scroll" id="offers-panel">
+                    <div class="empty"><div class="icon">🤝</div>Nenhuma oferta pendente</div>
+                </div>
+            </div>
+
+            <!-- ── Histórico de Mensagens ─────────────────── -->
+            <div class="tab-content" id="tab-messages">
+                <div class="panel">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                        <span style="font-size:13px;color:var(--muted)">Mensagens P2P · armazenadas em inventory.json</span>
+                        <button class="secondary" style="font-size:11px;padding:4px 10px" onclick="clearMessages()">Limpar</button>
+                    </div>
+                    <div class="scroll" style="max-height:calc(100vh - 220px)">
+                        <div id="messages-list">
+                            <div class="empty"><div class="icon">📨</div>Nenhuma mensagem ainda</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ── Sidebar Direita: Log ──────────────────────────── -->
+        <aside class="sidebar-right">
+            <div class="section" style="display:flex;align-items:center;justify-content:space-between">
+                <div class="section-title" style="margin:0">Log de eventos</div>
+                <button class="secondary" style="font-size:11px;padding:4px 10px" onclick="clearLog()">Limpar</button>
+            </div>
+            <div class="log-area" id="log-area"></div>
+        </aside>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- ── Modal: Proposta de Troca (pós SEARCH_HIT) ──────── -->
+    <div class="modal-overlay" id="trade-modal" onclick="if(event.target===this)closeTradeModal()">
+        <div class="modal">
+            <h2>🔄 Propor Troca</h2>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:16px">
+                A proposta será enviada por <strong>flooding</strong> até chegar ao peer destino.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:12px">
+                <div>
+                    <label class="modal-label">Peer destino</label>
+                    <input id="modal-target" type="text" placeholder="ID do peer (ex: ALUNO-05)" />
+                </div>
+                <div>
+                    <label class="modal-label">Figurinha que você oferece</label>
+                    <select id="modal-offer"></select>
+                </div>
+                <div>
+                    <label class="modal-label">Figurinha que você quer</label>
+                    <input id="modal-want" type="text" placeholder="FIG-XX" />
+                </div>
+                <div style="display:flex;gap:10px;margin-top:4px">
+                    <button class="success" style="flex:1" onclick="confirmModalTrade()">📤 Enviar Proposta</button>
+                    <button class="secondary" onclick="closeTradeModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
