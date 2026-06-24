@@ -2,22 +2,1426 @@
   "meta": {
     "peerId": "ALUNO-12",
     "myStickerId": "FIG-12",
-    "savedAt": "2026-06-23T18:07:25.847Z",
+    "savedAt": "2026-06-23T18:51:51.428Z",
     "version": "1.1.0"
   },
   "inventory": {
     "FIG-12": 28
   },
-  "peers": {},
+  "peers": {
+    "ALUNO-01": {
+      "ip": "10.106.118.115",
+      "port": 8080,
+      "account": "ALUNO-01",
+      "lastSeen": "2026-06-23T18:50:06.005Z"
+    }
+  },
   "messages": [
     {
-      "ts": "2026-06-23T01:55:32.502Z",
+      "ts": "2026-06-23T18:49:17.646Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.650Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "90a1cca3-96cb-4a36-b6c8-d5ffcac63be5"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.650Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.655Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "7162d23c-cbbe-4391-9297-ba689efbb3d1"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.655Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.660Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "dec03932-49bf-4f4a-86ab-88d22ecf69a2"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.660Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.666Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "c46a6fdb-912e-430e-835e-7441b08b94a4"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.666Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.670Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "fb577832-0f3a-4fd8-aa90-e4786bcd3297"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.671Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.675Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "c80eb540-93ae-45bf-8c99-8d9415490109"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.675Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.680Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "193c9c2c-d989-4ef3-bc82-a8861560cfc5"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.680Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.686Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "5f55ad98-cbd2-4128-b833-1b7596d8c8a6"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.686Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.691Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "abcaadbd-2125-4058-b64e-b2f9605bd3e2"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.691Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.696Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "49e66aa6-4446-411b-95e0-c476c65b7886"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.696Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.701Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "553d74b5-2eb8-4387-a0e9-8adad6577359"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.701Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.706Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "21ca7664-d586-46d0-94de-8be83547e784"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.706Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.711Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "313e5f95-6244-4067-bcc5-2b46980a7dda"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.711Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.716Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "f06213b4-ee0e-4af6-90a1-7dd0521f36ea"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.716Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.723Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a37b2ba1-3c94-4207-a4f1-f6fbd7f9bc6d"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.724Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.728Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "249a00cb-c615-446d-8405-0eedf3b9f85b"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.728Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.733Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "8ac36341-ba64-48be-acd0-99a4ce73b0cf"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.733Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.738Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "d6166a58-b755-473f-ab20-5acf36550a2b"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.738Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.744Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "64996dfd-731a-4a20-a29e-64b00fe1faed"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.744Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.750Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "c15d79d2-97ef-4b2e-8406-eaf967310d97"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.750Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.754Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e97b11af-ad88-4cbc-bcb3-10c05d4d2994"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.755Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.759Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a1f87974-0242-43b3-be14-633850d02a7d"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.759Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.764Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "5317ef1c-f819-4a64-bec4-aa40464253b5"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.764Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.769Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "d6c7d11d-689b-403f-8831-28d08ba381e0"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.769Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.774Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a7cda3e6-42a3-4c14-81a7-e69721119057"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.775Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.780Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "b741b39f-8e5c-4147-86e7-27b3892a7a60"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.780Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.785Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "22d5c5b2-6c2c-4e35-94e7-d5ef4b56da53"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.786Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.791Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "0b1a6c86-f6e2-457e-b48f-7094cc384c29"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.791Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.796Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "14671485-de35-42c7-97f3-c1b46a6555a3"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.797Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.802Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e3401dce-6f8b-4a78-b604-752ce4f01a46"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.802Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.808Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "fb4085a5-3f78-4d48-a294-924d4c271154"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.808Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.813Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "9e076c92-7f69-4460-98c9-1835aedfa4d3"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.813Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.817Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "f4c87621-a544-4864-8c49-e5a59a9c1c97"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.818Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.823Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "67f2ec99-8e9d-40a5-9838-2eafc6a84d3f"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.823Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.830Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "7b026210-27fa-48fc-b287-fc68ee39654a"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.830Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.835Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "d574e5b9-fc85-4631-8927-5d1c1872c6fc"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.835Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.839Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "7c12fb40-94f2-4ef0-b722-0f74e7741cfb"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.839Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.844Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "2453d763-79bc-433b-94b3-e27ee9a39c37"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.844Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.849Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "85ef74df-015b-414e-9f4b-9401408b4bfa"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.849Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.854Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "0074d828-c376-4c66-815b-b40938553e3d"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.854Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.859Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "5ae30e80-4824-4e40-93d0-a7787807242f"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.859Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.864Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "71455524-22c1-4216-8913-a8e43061db60"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.864Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.870Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "7486aca8-6c6c-4c9d-b0e7-8cdb9b69eb36"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.870Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.876Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "9111eff6-1983-418a-9c70-39b714f1014e"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.876Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.881Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "bd42484d-62d4-42fb-b8c3-e488bf01e6d1"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.881Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.886Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "4c259dcc-d7dc-4b56-a3ce-b0d7c982ad83"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.887Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.892Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "1426ea42-f242-4ac8-84d3-82e73f499e0e"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.892Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.898Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "da521d77-f019-4dc4-bf9f-321455a5f58e"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.898Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.903Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "c3352d30-2cc3-4ef9-b126-7a05fe6c8c81"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.903Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.908Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "4fbf942e-32ab-416a-b053-9cc7583c6fe0"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.908Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.914Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "9fe67499-539d-4624-899b-0d71df77b015"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.914Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.920Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e23655e5-b986-4280-aa66-14c431f04153"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.920Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.925Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "ce3ec638-5324-4414-9716-823e5048b083"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.925Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.932Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "b2447de6-6aa8-4106-9816-0690d26a5e64"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.932Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.937Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e30fedd9-3a8d-4e60-bb71-18a80b6903b3"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.937Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.943Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "d05cbb98-80f1-43e5-884e-8bfaeaa30ff4"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.943Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.948Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "f376bf76-0ba3-4091-8fbb-fb069eab4c4b"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.948Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.953Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "91ae6cb1-2a64-477c-bbbc-5cbc3504417d"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.953Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.958Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "7425a959-5e6f-43aa-b191-515d239d8acf"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.958Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.964Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e7f12dd5-3f61-461a-9939-a424a40f9770"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.964Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.968Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "ec122ade-a215-48b3-a69e-6c8d744a46fc"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.969Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.973Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "bfa36455-2ab7-4770-bde0-cbe6e9775d2d"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.974Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.978Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "b93ed3e9-6706-47a1-8d4b-978749889236"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.979Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.983Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "941b7c46-e134-41c6-bfb3-690ee230a464"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.983Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.988Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "93e40fd6-4bb3-4405-9378-5c2f69eade60"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.988Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.993Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "2c34aca2-54e0-49fa-b116-48a8cb442f64"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.993Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.999Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "84861411-79e7-4d64-8382-9da09d7b4b36"
+    },
+    {
+      "ts": "2026-06-23T18:49:17.999Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.004Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a857feca-24f2-49cf-a6dd-166720e7bbf1"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.004Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.010Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "cae1d1b8-9a4c-4e9e-9039-3c54febb0010"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.010Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.015Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "4002b5f9-eb05-414e-9393-6b36e286c0b3"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.016Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.021Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e9a6f04e-a193-4098-a99d-04fbaa3b5301"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.022Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.027Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "223017b9-a77d-41cb-bbcc-4cc77fae40ef"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.028Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.034Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a14bb98e-0614-47dd-9c2a-da4518a9fac9"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.034Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.039Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "8a6856f4-6969-457f-b25e-c670339f58c1"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.039Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.044Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "6f67e865-7b0e-429e-9b57-06338bf0a33b"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.044Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.049Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "84575918-66bf-41db-af05-dbbcfc9f5a19"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.049Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.054Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "02d2cc77-d301-4ec7-86cd-83dc4bc4fd9a"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.054Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.059Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "3bd5ba69-e7ba-431e-b075-b067c4e75447"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.059Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.063Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a81ed665-1599-434a-8331-8590e5a07b1c"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.063Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.068Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "e04fbaf8-1a2b-4f20-bb88-d3ee2839dbef"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.068Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.073Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "2ca069a6-f8dc-472b-8212-491d7747f775"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.073Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.079Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "d68d7ee8-13e1-40d1-9277-f07f27ee0ae3"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.079Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.085Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "20d880e8-08a3-4b19-b6c3-be907ddf255c"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.085Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.090Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "62ec9d44-1cc9-43da-911c-8268ca838e3c"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.090Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.095Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "3690962e-5eae-4df7-8e91-651e33bb25cb"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.095Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.100Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "3bbe143d-df8a-41d7-a48e-17406b1515bf"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.100Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.104Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "4c732b05-de16-4e8e-b7b5-c1621a196fc2"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.105Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.109Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "d1b8d21f-b7bf-419f-b080-ca69e5a415da"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.110Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.115Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "91c80571-781c-4350-9c11-4c36800c6d53"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.115Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.121Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "ec69f383-89c4-4198-aada-d6d22e4df3b5"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.121Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.126Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "ad2c4709-7220-4827-b6c7-aacedc88da19"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.126Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.133Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a24754af-8d35-4e87-aece-b52aaf99421b"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.133Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.138Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "a3f83b35-ceb5-4051-8d9e-69c085a80c4d"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.138Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.145Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "message_id": "24a3e8ff-28cf-445e-abb3-eff24b221cd4"
+    },
+    {
+      "ts": "2026-06-23T18:49:18.146Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-12",
+      "account": "ALUNO-12"
+    },
+    {
+      "ts": "2026-06-23T18:49:52.658Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-07",
+      "account": "ALUNO-12",
+      "address": "10.106.118.115:8080"
+    },
+    {
+      "ts": "2026-06-23T18:49:52.667Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-01",
+      "message_id": "dbe5280c-9d10-4530-ab64-81aa98711028"
+    },
+    {
+      "ts": "2026-06-23T18:49:52.670Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-01",
+      "account": "ALUNO-01"
+    },
+    {
+      "ts": "2026-06-23T18:50:05.996Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "PEER-1782240605843",
+      "account": "ALUNO-12",
+      "address": "10.106.118.115:8080"
+    },
+    {
+      "ts": "2026-06-23T18:50:06.005Z",
+      "direction": "IN",
+      "type": "HELLO",
+      "peer": "ALUNO-01",
+      "message_id": "31787e4e-ba35-4677-9509-78fb84d87870"
+    },
+    {
+      "ts": "2026-06-23T18:50:06.008Z",
+      "direction": "OUT",
+      "type": "HELLO",
+      "peer": "ALUNO-01",
+      "account": "ALUNO-01"
+    },
+    {
+      "ts": "2026-06-23T18:50:16.033Z",
       "direction": "OUT",
       "type": "SEARCH",
       "peer": "broadcast",
-      "sticker_id": "FIG-10",
-      "query_id": "f049cc86-5f81-4b5a-9038-03c77c0b65ce",
-      "neighbors_count": 0
+      "sticker_id": "FIG-06",
+      "query_id": "078506e5-52a4-4de9-9681-0180ae26f68b",
+      "neighbors_count": 1
+    },
+    {
+      "ts": "2026-06-23T18:50:51.496Z",
+      "direction": "IN",
+      "type": "SEARCH",
+      "peer": "ALUNO-01",
+      "message_id": "2f69cea3-5dcc-4c70-84a0-0554669f4ea0"
+    },
+    {
+      "ts": "2026-06-23T18:50:51.497Z",
+      "direction": "OUT",
+      "type": "SEARCH_HIT",
+      "peer": "ALUNO-06",
+      "sticker_id": "FIG-12",
+      "query_id": "8dc71577-b375-4d82-a7bc-2a7829d9fac5"
+    },
+    {
+      "ts": "2026-06-23T18:51:50.921Z",
+      "direction": "IN",
+      "type": "SEARCH",
+      "peer": "ALUNO-01",
+      "message_id": "827c677d-0ba5-4764-93f0-f1025b934b81"
+    },
+    {
+      "ts": "2026-06-23T18:51:50.922Z",
+      "direction": "OUT",
+      "type": "SEARCH_HIT",
+      "peer": "ALUNO-06",
+      "sticker_id": "FIG-12",
+      "query_id": "fbf59c38-f40c-4bf1-a126-3f6c1e994023"
     }
   ],
   "searchHistory": [
@@ -26,6 +1430,28 @@
       "type": "SENT",
       "sticker_id": "FIG-10",
       "query_id": "f049cc86-5f81-4b5a-9038-03c77c0b65ce"
+    },
+    {
+      "ts": "2026-06-23T18:50:16.033Z",
+      "type": "SENT",
+      "sticker_id": "FIG-06",
+      "query_id": "078506e5-52a4-4de9-9681-0180ae26f68b"
+    },
+    {
+      "ts": "2026-06-23T18:50:51.496Z",
+      "query_id": "8dc71577-b375-4d82-a7bc-2a7829d9fac5",
+      "sticker_id": "FIG-12",
+      "origin": "ALUNO-06",
+      "ttl": 6,
+      "found": true
+    },
+    {
+      "ts": "2026-06-23T18:51:50.922Z",
+      "query_id": "fbf59c38-f40c-4bf1-a126-3f6c1e994023",
+      "sticker_id": "FIG-12",
+      "origin": "ALUNO-06",
+      "ttl": 6,
+      "found": true
     }
   ],
   "tradeHistory": []

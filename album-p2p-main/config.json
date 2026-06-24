@@ -1,0 +1,9 @@
+{
+  "peer_id": "ALUNO-12",
+  "sticker_id": "FIG-12",
+  "port": 8080,
+  "default_ttl": 7,
+  "sticker_url": "",
+  "neighbors": [],
+  "ip": "26.140.108.156"
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema P2P para troca de figurinhas entre alunos">
+  <title>Figurinhas P2P</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="app-header">
+    <div class="header-left">
+      <div class="logo">🎴</div>
+      <div class="header-info">
+        <h1>Figurinhas P2P</h1>
+        <div class="node-info">
+          <span id="peer-id-display" class="badge badge-primary">—</span>
+          <span id="sticker-id-display" class="badge badge-accent">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div id="connection-status" class="status-indicator disconnected">
+        <span class="status-dot"></span>
+        <span class="status-text">Desconectado</span>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value" id="stat-unique">0</span>
+          <span class="stat-label">Únicas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-total">0</span>
+          <span class="stat-label">Total</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-peers">0</span>
+          <span class="stat-label">Peers</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="app-main">
+    <!-- Left Column: Album + Search + Trades -->
+    <div class="column column-left">
+      <!-- Tabs de navegação principal -->
+      <div class="main-nav-tabs">
+        <button class="main-nav-tab active" data-target="inventory-panel">
+          <span class="tab-icon">🎴</span> Figurinhas
+        </button>
+        <button class="main-nav-tab" data-target="search-panel">
+          <span class="tab-icon">🔍</span> Buscar
+        </button>
+        <button class="main-nav-tab" data-target="trade-panel">
+          <span class="tab-icon">🤝</span> Trocas
+          <span class="badge-dot" id="tab-trade-badge" style="display: none;"></span>
+        </button>
+      </div>
+
+      <section class="panel" id="inventory-panel">
+        <div class="panel-header">
+          <h2>📒 Álbum</h2>
+          <span class="panel-badge" id="inventory-count">0</span>
+        </div>
+        <div class="panel-body">
+          <div id="inventory-grid" class="inventory-grid">
+            <div class="empty-state">Nenhuma figurinha no inventário</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="search-panel" style="display: none;">
+        <div class="panel-header">
+          <h2>🔍 Buscar Figurinha</h2>
+        </div>
+        <div class="panel-body">
+          <div class="search-form">
+            <input type="text" id="search-input" placeholder="Ex: FIG-05" />
+            <button id="search-btn" class="btn btn-accent">
+              <span class="btn-icon">🔍</span> Buscar
+            </button>
+          </div>
+          <div id="search-results" class="search-results">
+            <div class="empty-state">Nenhuma busca realizada</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="trade-panel" style="display: none;">
+        <div class="panel-header">
+          <h2>🤝 Trocas</h2>
+          <span class="panel-badge pulse" id="pending-trades-count" style="display:none">0</span>
+        </div>
+        <div class="panel-body">
+          <div class="tabs">
+            <button class="tab active" data-tab="pending">Pendentes</button>
+            <button class="tab" data-tab="history">Histórico</button>
+          </div>
+          <div id="trade-pending" class="trade-list tab-content active">
+            <div class="empty-state">Nenhuma troca pendente</div>
+          </div>
+          <div id="trade-history" class="trade-list tab-content">
+            <div class="empty-state">Nenhuma troca realizada</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Column: Neighbors + Log -->
+    <div class="column column-right">
+      <section class="panel" id="neighbors-panel">
+        <div class="panel-header">
+          <h2>👥 Vizinhos</h2>
+          <span class="panel-badge" id="neighbors-count">0</span>
+        </div>
+        <div class="panel-body">
+          <div class="add-neighbor-form">
+            <div class="neighbor-input-group">
+              <span class="neighbor-input-prefix">ws://</span>
+              <input type="text" id="neighbor-url-input" placeholder="192.168.1.10" />
+              <span class="neighbor-input-separator">:</span>
+              <input type="number" id="neighbor-port-input" value="8080" min="1" max="65535" />
+            </div>
+            <button id="add-neighbor-btn" class="btn btn-primary btn-sm">+ Adicionar</button>
+          </div>
+          <div id="neighbors-list" class="neighbors-list">
+            <div class="empty-state">Nenhum vizinho conectado</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-log" id="log-panel">
+        <div class="panel-header">
+          <h2>📋 Log da Rede</h2>
+          <button id="clear-log-btn" class="btn btn-ghost btn-sm">Limpar</button>
+        </div>
+        <div class="panel-body">
+          <div id="log-container" class="log-container">
+            <div class="log-entry log-info">Sistema iniciado. Aguardando conexão WebSocket...</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Trade Proposal Modal -->
+  <div id="trade-modal" class="modal" style="display:none">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🤝 Propor Troca</h3>
+        <button class="modal-close" id="trade-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="trade-form">
+          <div class="trade-form-section">
+            <label>Enviar para (Peer ID):</label>
+            <input type="text" id="trade-target-peer" placeholder="ALUNO-XX" />
+          </div>
+          <div class="trade-form-row">
+            <div class="trade-form-section">
+              <label>Ofereço:</label>
+              <select id="trade-offer-sticker"></select>
+            </div>
+            <div class="trade-form-divider">⇄</div>
+            <div class="trade-form-section">
+              <label>Quero:</label>
+              <input type="text" id="trade-want-sticker" placeholder="FIG-XX" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="trade-cancel-btn" class="btn btn-ghost">Cancelar</button>
+        <button id="trade-submit-btn" class="btn btn-accent">Enviar Proposta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incoming Trade Modal -->
+  <div id="incoming-trade-modal" class="modal" style="display:none">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>📨 Proposta de Troca Recebida</h3>
+      </div>
+      <div class="modal-body">
+        <div id="incoming-trade-details" class="trade-details"></div>
+      </div>
+      <div class="modal-footer">
+        <button id="incoming-reject-btn" class="btn btn-danger">Recusar</button>
+        <button id="incoming-accept-btn" class="btn btn-success">Aceitar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticker Preview Modal -->
+  <div id="sticker-preview-modal" class="modal" style="display:none">
+    <div class="modal-overlay"></div>
+    <div class="modal-content sticker-preview-content">
+      <button class="modal-close" id="sticker-preview-close">&times;</button>
+      <div class="sticker-preview-body">
+        <img id="sticker-preview-img" src="" alt="" class="sticker-preview-img" />
+        <div class="sticker-preview-info">
+          <span id="sticker-preview-name" class="sticker-preview-name"></span>
+          <span id="sticker-preview-qty" class="sticker-preview-qty"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "servidor-p2p-figurinhas",
+  "version": "1.0.0",
+  "description": "Sistema de Figurinhas P2P - Rede não estruturada com busca por inundação",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0"
+  }
+}
